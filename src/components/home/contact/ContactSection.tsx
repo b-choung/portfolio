@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { FiMail, FiCopy, FiCheck } from "react-icons/fi";
+import SectionWrapper from "@/components/common/SectionWrapper";
+import SectionHeader from "@/components/common/SectionHeader";
 
-const EMAIL = "basyle08@gmail.com";
+const EMAIL = "b.choung8@gmail.com";
 
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
@@ -15,16 +17,8 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="px-6 py-20 max-w-6xl mx-auto w-full">
-      <div className="mb-10">
-        <p className="text-sm font-mono text-muted-foreground mb-3 tracking-widest uppercase">
-          Contact
-        </p>
-        <h2 className="text-3xl font-bold">
-          <span className="gradient-text">연락하기</span>
-        </h2>
-      </div>
-
+    <SectionWrapper>
+      <SectionHeader label="Contact" title="연락하기" />
       <div className="glass-strong rounded-xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-3">
           <FiMail size={20} className="text-primary shrink-0" />
@@ -59,6 +53,6 @@ export default function ContactSection() {
           </a>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

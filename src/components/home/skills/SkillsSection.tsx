@@ -1,4 +1,6 @@
 import { SkillCategory } from "@/types/skill";
+import SectionWrapper from "@/components/common/SectionWrapper";
+import SectionHeader from "@/components/common/SectionHeader";
 
 function SkillGroup({ category }: { category: SkillCategory }) {
   return (
@@ -26,21 +28,13 @@ export default function SkillsSection({
   skillCategories: SkillCategory[];
 }) {
   return (
-    <section className="px-6 py-20 max-w-6xl mx-auto w-full">
-      <div className="mb-10">
-        <p className="text-sm font-mono text-muted-foreground mb-3 tracking-widest uppercase">
-          Skills
-        </p>
-        <h2 className="text-3xl font-bold">
-          <span className="gradient-text">기술 스택</span>
-        </h2>
-      </div>
-
+    <SectionWrapper>
+      <SectionHeader label="Skills" title="기술 스택" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {skillCategories.map((category) => (
           <SkillGroup key={category.id} category={category} />
         ))}
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

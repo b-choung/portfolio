@@ -1,4 +1,6 @@
 import { Education } from "@/types/education";
+import SectionWrapper from "@/components/common/SectionWrapper";
+import SectionHeader from "@/components/common/SectionHeader";
 
 const categoryLabel: Record<Education["category"], string> = {
   degree: "학위",
@@ -38,21 +40,13 @@ export default function EducationSection({
   educations: Education[];
 }) {
   return (
-    <section className="px-6 py-20 max-w-6xl mx-auto w-full">
-      <div className="mb-10">
-        <p className="text-sm font-mono text-muted-foreground mb-3 tracking-widest uppercase">
-          Education
-        </p>
-        <h2 className="text-3xl font-bold">
-          <span className="gradient-text">학력 및 교육</span>
-        </h2>
-      </div>
-
+    <SectionWrapper>
+      <SectionHeader label="Education" title="학력 및 교육" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {educations.map((item) => (
           <EducationItem key={item.id} item={item} />
         ))}
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
