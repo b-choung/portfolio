@@ -1,6 +1,13 @@
-import HeroSection from "@/components/home/HeroSection";
+import HeroSection from "@/components/home/hero/HeroSection";
+import SkillsSection from "@/components/home/skills/SkillsSection";
+import ExperienceSection from "@/components/home/experience/ExperienceSection";
 import ProjectList from "@/components/projects/ProjectList";
+import EducationSection from "@/components/home/education/EducationSection";
+import ContactSection from "@/components/home/contact/ContactSection";
+import { skillCategories } from "@/data/skills";
+import { experiences } from "@/data/experience";
 import { projects } from "@/data/projects";
+import { educations } from "@/data/education";
 
 export default function Home() {
   return (
@@ -8,6 +15,10 @@ export default function Home() {
       <div className="relative">
         <HeroSection />
       </div>
+
+      <SkillsSection skillCategories={skillCategories} />
+
+      <ExperienceSection experiences={experiences} />
 
       <section className="min-h-dvh px-6 py-20 max-w-6xl mx-auto w-full">
         <div className="mb-10">
@@ -23,6 +34,9 @@ export default function Home() {
         </div>
         <ProjectList projects={projects} />
       </section>
+
+      <EducationSection educations={educations} />
+      <ContactSection />
     </main>
   );
 }

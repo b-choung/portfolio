@@ -143,7 +143,7 @@
     background-clip: text;
   }
 
-  .terminal-prompt::before {
+.terminal-prompt::before {
     content: "> ";
     color: oklch(0.87 0.27 152);
     font-family: var(--font-mono);

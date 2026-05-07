@@ -27,7 +27,7 @@ export default function RootLayout({
       lang="ko"
       className={`${inter.variable} ${jetbrainsMono.variable} h-full`}
     >
-      <body className="relative min-h-full flex flex-col">
+      <body className="relative min-h-full flex flex-col pb-20">
         {children}
       </body>
     </html>

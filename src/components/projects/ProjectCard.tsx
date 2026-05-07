@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Project } from "@/types/project";
 import { Badge } from "@/components/ui/badge";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
@@ -59,6 +60,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </Badge>
         ))}
       </div>
+
+      <Link
+        href={`/projects/${project.id}`}
+        className="text-xs font-mono text-primary hover:text-primary/80 transition-colors self-start"
+      >
+        &gt; 자세히 보기
+      </Link>
     </div>
   );
 }
