@@ -1,45 +1,34 @@
+import TypewriterRole from "./TypewriterRole";
+
 export default function HeroSection() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-dvh px-6 text-center">
-      <div className="glass-strong rounded-xl px-12 py-16 max-w-2xl w-full text-left font-mono">
-        <p className="text-muted-foreground text-sm mb-6 tracking-widest">
-          // portfolio.ts
-        </p>
+    <section className="relative flex flex-col justify-center min-h-dvh px-8 md:px-20">
+      {/* Terminal file label */}
+      <p className="font-mono text-sm text-muted-foreground mb-10 tracking-widest">
+        $ portfolio.tsx
+      </p>
 
-        <div className="space-y-3 mb-8">
-          <p className="text-muted-foreground">
-            <span className="text-primary">const</span>{" "}
-            <span className="text-foreground">name</span>{" "}
-            <span className="text-primary">=</span>{" "}
-            <span className="gradient-text font-bold text-xl">&quot;홍길동&quot;</span>
-          </p>
-          <p className="text-muted-foreground">
-            <span className="text-primary">const</span>{" "}
-            <span className="text-foreground">role</span>{" "}
-            <span className="text-primary">=</span>{" "}
-            <span className="text-accent">&quot;Frontend Developer&quot;</span>
-          </p>
-          <p className="text-muted-foreground">
-            <span className="text-primary">const</span>{" "}
-            <span className="text-foreground">bio</span>{" "}
-            <span className="text-primary">=</span>{" "}
-            <span className="text-accent/80">
-              &quot;사용자 경험을 중심으로 생각합니다.&quot;
-            </span>
-          </p>
-        </div>
+      {/* Name */}
+      <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold leading-none tracking-tight mb-6">
+        <span className="gradient-text">홍길동</span>
+      </h1>
 
-        <div className="flex items-center gap-2 text-muted-foreground text-sm">
-          <span className="text-primary">$</span>
-          <span className="border-r-2 border-primary animate-pulse">&nbsp;</span>
-        </div>
-      </div>
+      {/* Typewriter role */}
+      <p className="font-mono text-xl md:text-2xl mb-8 flex items-center gap-2">
+        <span className="text-muted-foreground">&gt;</span>
+        <TypewriterRole />
+      </p>
 
-      <div className="absolute bottom-10 flex flex-col items-center gap-2 text-muted-foreground animate-bounce">
-        <span className="text-xs font-mono tracking-widest">scroll</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+      {/* Bio */}
+      <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl">
+        사용자 경험을 중심으로 생각하는<br />
+        프론트엔드 개발자입니다.
+      </p>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-10 left-8 md:left-20 flex items-center gap-3 text-muted-foreground">
+        <div className="w-px h-12 bg-border" />
+        <span className="text-xs font-mono tracking-widest rotate-0">scroll</span>
       </div>
     </section>
   );
