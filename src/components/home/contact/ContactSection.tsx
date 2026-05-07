@@ -4,8 +4,9 @@ import { useState } from "react";
 import { FiMail, FiCopy, FiCheck } from "react-icons/fi";
 import SectionWrapper from "@/components/common/SectionWrapper";
 import SectionHeader from "@/components/common/SectionHeader";
+import { personal } from "@/data/personal";
 
-const EMAIL = "b.choung8@gmail.com";
+const EMAIL = personal.email;
 
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { personal } from "@/data/personal";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,8 +14,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Frontend Developer Portfolio",
+  title: `${personal.name} | Portfolio`,
+  description: personal.metaDescription,
 };
 
 export default function RootLayout({

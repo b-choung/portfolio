@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { personal } from "@/data/personal";
 
-const ROLES = ["Frontend Developer", "React Engineer", "UI 구현 전문가"];
 const TYPE_SPEED = 80;
 const DELETE_SPEED = 40;
 const PAUSE_MS = 2000;
@@ -13,7 +13,7 @@ export default function TypewriterRole() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const current = ROLES[roleIndex];
+    const current = personal.roles[roleIndex];
 
     if (!isDeleting && text === current) {
       const pause = setTimeout(() => setIsDeleting(true), PAUSE_MS);
@@ -22,7 +22,7 @@ export default function TypewriterRole() {
 
     if (isDeleting && text === "") {
       setIsDeleting(false);
-      setRoleIndex((i) => (i + 1) % ROLES.length);
+      setRoleIndex((i) => (i + 1) % personal.roles.length);
       return;
     }
 

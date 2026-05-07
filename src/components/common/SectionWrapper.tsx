@@ -11,7 +11,7 @@ export default function SectionWrapper({
 }: SectionWrapperProps) {
   return (
     <section
-      className={`pl-6 pr-16 max-w-6xl mx-auto w-full min-h-[50dvh] ${py} ${className}`}
+      className={`pl-6 pr-20 max-w-6xl mx-auto w-full min-h-[50dvh] ${py} ${className}`}
     >
       {children}
     </section>
