@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import { FiGithub, FiExternalLink, FiArrowLeft } from "react-icons/fi";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { projects } from "@/data/projects";
+import BackButton from "@/components/projects/BackButton";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ id: p.id }));
@@ -31,13 +31,7 @@ export default async function ProjectDetailPage({
 
   return (
     <main className="flex-1 px-6 py-20 max-w-4xl mx-auto w-full">
-      <Link
-        href="/"
-        className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors mb-10"
-      >
-        <FiArrowLeft size={14} />
-        돌아가기
-      </Link>
+      <BackButton />
 
       {/* Header */}
       <div className="glass-strong rounded-xl p-8 mb-6">
