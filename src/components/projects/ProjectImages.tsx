@@ -16,7 +16,7 @@ export default function ProjectImages({ images }: { images: string[] }) {
               src={src}
               alt={`Screenshot ${i + 1}`}
               fill
-              className="object-cotain hover:scale-105 transition-transform duration-300"
+              className="object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
         ))}

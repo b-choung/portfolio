@@ -21,9 +21,11 @@ export default function TypewriterRole() {
     }
 
     if (isDeleting && text === "") {
-      setIsDeleting(false);
-      setRoleIndex((i) => (i + 1) % personal.roles.length);
-      return;
+      const next = setTimeout(() => {
+        setIsDeleting(false);
+        setRoleIndex((i) => (i + 1) % personal.roles.length);
+      }, 400);
+      return () => clearTimeout(next);
     }
 
     const timeout = setTimeout(
