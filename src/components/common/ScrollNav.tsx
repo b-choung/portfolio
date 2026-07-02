@@ -19,20 +19,22 @@ export default function ScrollNav() {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
 
-      let maxVisible = 0;
+      // 페이지 맨 아래에 닿으면 마지막 섹션(높이가 작아도)을 활성화
+      const scrolledToBottom =
+        scrollY + windowHeight >= document.documentElement.scrollHeight - 2;
+      if (scrolledToBottom) {
+        setActive(SECTIONS[SECTIONS.length - 1].id);
+        return;
+      }
+
+      // 뷰포트 상단에서 일정 지점(기준선)을 지난 마지막 섹션을 활성화
+      const line = scrollY + windowHeight * 0.35;
       let current = SECTIONS[0].id;
 
       for (const { id } of SECTIONS) {
         const el = document.getElementById(id);
         if (!el) continue;
-        const top = el.offsetTop;
-        const bottom = top + el.offsetHeight;
-        const visibleHeight = Math.max(
-          0,
-          Math.min(bottom, scrollY + windowHeight) - Math.max(top, scrollY),
-        );
-        if (visibleHeight > maxVisible) {
-          maxVisible = visibleHeight;
+        if (el.offsetTop <= line) {
           current = id;
         }
       }
