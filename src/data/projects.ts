@@ -11,7 +11,7 @@ export const projects: Project[] = [
     highlights: [
       "Next.js 15 App Router + React 19 기반 구축",
       "Tailwind CSS 4 + shadcn/ui로 디자인 시스템 구성",
-      "Claude AI로 콘텐츠 작성",
+      "Claude AI로 콘텐츠 작성 및 코드 리뷰 진행",
     ],
     category: "personal",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
@@ -26,7 +26,7 @@ export const projects: Project[] = [
       "바이브 코딩을 경험해보고자 만든 미니앱 모음 프로젝트입니다. 칸반 보드 스타일의 태스크 보드부터 타이머, 목표 추적, 기분 기록, 꽃 추천, 메모, 랜덤 플랜까지 다양한 기능을 가진 미니앱들을 Next.js로 구현하여, 프론트엔드 개발의 다양한 측면을 탐구하는 데 중점을 두었습니다.",
     highlights: [
       "Task Board / Timer / Goal Tracker / Mood Tracker / Flower Picks / Memo / Random Plan",
-      "Claude AI로 프로젝트 기획 및 콘텐츠 작성",
+      "Claude AI로 프로젝트 기획 및 콘텐츠 작성과 코드 리뷰 진행",
     ],
     category: "personal",
     techStack: [
