@@ -2,22 +2,37 @@ import { Experience } from "@/types/experience";
 
 export const experiences: Experience[] = [
   {
-    id: "exp-1",
-    company: "○○ 회사",
-    role: "Frontend Developer",
-    period: "2022.11 – 현재",
-    current: true,
+    id: "maxst",
+    company: "맥스트",
+    role: "프론트엔드 개발자 / 선임",
+    period: "2021.10 – 2024.09 (3년)",
+    current: false,
     description:
-      "React / Next.js 기반의 웹 서비스 개발을 담당하고 있습니다. 신규 이커머스 프론트엔드 구축, 관리자 대시보드 개발, 모바일 앱 리뉴얼 프로젝트에 참여했습니다.",
-    techStack: ["React", "Next.js", "TypeScript", "React Native"],
+      "메타버스 서비스 '틀로나' 프로젝트와 AR 네비게이션 서비스의 어드민 페이지 개발을 담당했습니다.",
+    techStack: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Canvas API",
+      "Three.js",
+      "Tailwind CSS",
+      "Recoil",
+      "SWR",
+    ],
   },
   {
-    id: "exp-2",
-    company: "△△ 스타트업",
-    role: "Frontend Developer (인턴)",
-    period: "2022.03 – 2022.08",
-    description:
-      "사용자 대면 서비스의 UI 개발 및 유지보수를 담당했습니다. 컴포넌트 라이브러리 도입과 코드 품질 개선에 기여했습니다.",
-    techStack: ["React", "JavaScript", "Styled Components"],
+    id: "stockfolio",
+    company: "스톡폴리오",
+    role: "프론트엔드 개발자 / 인턴",
+    period: "2021.08 – 2021.09 (2개월)",
+    description: "랜딩 페이지 및 채용 페이지 개발을 진행했습니다.",
+    techStack: ["React", "JavaScript", "Styled Components", "MobX"],
+  },
+  {
+    id: "stunitas",
+    company: "에스티유니타스",
+    role: "콘텐츠 기획자 / 사원(비개발)",
+    period: "2019.03 – 2019.09 (6개월)",
+    description: "교육 앱 '커넥츠'의 콘텐츠 기획 및 운영을 담당했습니다.",
   },
 ];

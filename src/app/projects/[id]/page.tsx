@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { projects } from "@/data/projects";
 import BackButton from "@/components/projects/BackButton";
+import ProjectImages from "@/components/projects/ProjectImages";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ id: p.id }));
@@ -86,6 +87,10 @@ export default async function ProjectDetailPage({
           {project.longDescription ?? project.description}
         </p>
       </div>
+
+      {project.images && project.images.length > 0 && (
+        <ProjectImages images={project.images} />
+      )}
 
       {/* Highlights */}
       {project.highlights && project.highlights.length > 0 && (

@@ -11,4 +11,5 @@ export interface Project {
   githubUrl?: string;
   deployUrl?: string;
   period: string;
+  images?: string[];
 }
