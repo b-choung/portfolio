@@ -26,6 +26,9 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/b-choung/regroove",
     period: "2026.08",
+    images: [
+      "https://github.com/user-attachments/assets/695ef655-cece-4330-9096-48d9cbf4fd66",
+    ],
   },
   {
     id: "portfolio",
