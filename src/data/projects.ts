@@ -2,6 +2,32 @@ import { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
+    id: "regroove",
+    title: "REGROOVE - 채용 공고 통합 트래커",
+    description: "칸반 보드 형식의 채용 공고 통합 트래커입니다.",
+    longDescription:
+      "여러 채용 사이트에 흩어진 공고를 한곳에 모아 관리하고, 지원 프로세스를 칸반보드로 추적하는 개인 프로젝트입니다. 다시 리듬을 탄다는 의미를 부여해 REGROOVE라는 이름을 붙였습니다.",
+    highlights: [
+      "Supabase로 데이터베이스 구축 및 인증/권한 관리 구현",
+      "Cheerio로 데이터 파싱 자동화",
+      "Next.js 15 App Router + React 19 기반 구축",
+      "Tailwind CSS 4 + shadcn/ui로 디자인 시스템 구성",
+      "Claude AI로 콘텐츠 작성 및 코드 리뷰 진행",
+    ],
+    category: "personal",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Superbase",
+      "Cheerio",
+      "Vercel",
+      "Tailwind CSS",
+      "shadcn/ui",
+    ],
+    githubUrl: "https://github.com/b-choung/regroove",
+    period: "2026.08",
+  },
+  {
     id: "portfolio",
     title: "포트폴리오 웹사이트",
     description:
