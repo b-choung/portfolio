@@ -10,7 +10,7 @@ export default function ExperienceSection({
 }) {
   return (
     <SectionWrapper>
-      <SectionHeader label="Experience" title="경력" />
+      <SectionHeader index="03" label="Experience" title="경력" />
       <div className="max-w-3xl">
         {experiences.map((item, i) => (
           <ExperienceItem

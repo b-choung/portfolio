@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 
 const SECTIONS = [
-  { id: "hero", label: "Intro" },
-  { id: "skills", label: "Skills" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
-  { id: "education", label: "Education" },
-  { id: "contact", label: "Contact" },
+  { id: "hero", label: "Intro", index: "01" },
+  { id: "skills", label: "Skills", index: "02" },
+  { id: "experience", label: "Experience", index: "03" },
+  { id: "projects", label: "Projects", index: "04" },
+  { id: "education", label: "Education", index: "05" },
+  { id: "contact", label: "Contact", index: "06" },
 ];
 
 export default function ScrollNav() {
@@ -52,26 +52,33 @@ export default function ScrollNav() {
   };
 
   return (
-    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-4">
-      {SECTIONS.map(({ id, label }) => (
-        <button
-          key={id}
-          onClick={() => scrollTo(id)}
-          className="group flex items-center gap-3 justify-end"
-          aria-label={label}
-        >
-          <span className="text-xs font-mono text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-            {label}
-          </span>
-          <div
-            className={`rounded-full transition-all duration-300 ${
-              active === id
-                ? "w-2.5 h-2.5 bg-primary translate-x-0.5"
-                : "w-1.5 h-1.5 bg-muted-foreground/30 group-hover:bg-muted-foreground/60"
-            }`}
-          />
-        </button>
-      ))}
+    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-3 items-end">
+      {SECTIONS.map(({ id, label, index }) => {
+        const isActive = active === id;
+        return (
+          <button
+            key={id}
+            onClick={() => scrollTo(id)}
+            className="group flex items-center gap-2 justify-end"
+            aria-label={label}
+          >
+            <span
+              className={`text-xs font-mono tracking-widest whitespace-nowrap transition-opacity ${
+                isActive ? "opacity-100 text-primary" : "opacity-0 group-hover:opacity-60 text-muted-foreground"
+              }`}
+            >
+              {label}
+            </span>
+            <span
+              className={`font-serif italic text-sm transition-colors ${
+                isActive ? "text-primary" : "text-muted-foreground/40 group-hover:text-muted-foreground"
+              }`}
+            >
+              {index}
+            </span>
+          </button>
+        );
+      })}
     </div>
   );
 }

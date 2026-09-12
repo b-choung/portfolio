@@ -37,7 +37,7 @@ export default function TypewriterRole() {
   }, [text, isDeleting, roleIndex]);
 
   return (
-    <span className="text-primary font-mono">
+    <span className="text-primary font-serif italic">
       {text}
       <span className="border-r-2 border-primary ml-0.5 animate-pulse">&nbsp;</span>
     </span>

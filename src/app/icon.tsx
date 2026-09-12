@@ -8,27 +8,27 @@ export default function Icon() {
     (
       <div
         style={{
-          background: "#0a0a0a",
+          background: "#292217",
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           borderRadius: "6px",
-          border: "1.5px solid #00ff8840",
+          border: "1.5px solid #e05a2b40",
         }}
       >
         <span
           style={{
-            color: "#00ff88",
-            fontSize: "13px",
+            color: "#e05a2b",
+            fontSize: "17px",
             fontWeight: 700,
-            fontFamily: "monospace",
-            letterSpacing: "-0.5px",
+            fontFamily: "Georgia, serif",
+            fontStyle: "italic",
             lineHeight: 1,
           }}
         >
-          {">" + "_"}
+          01
         </span>
       </div>
     ),

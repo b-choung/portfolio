@@ -9,7 +9,7 @@ export default function BackButton() {
   return (
     <button
       onClick={() => router.back()}
-      className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors mb-10"
+      className="ink-underline inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors mb-10 tracking-widest uppercase"
     >
       <FiArrowLeft size={14} />
       돌아가기

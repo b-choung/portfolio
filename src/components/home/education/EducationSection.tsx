@@ -10,7 +10,7 @@ export default function EducationSection({
 }) {
   return (
     <SectionWrapper>
-      <SectionHeader label="Education" title="학력 및 교육" />
+      <SectionHeader index="05" label="Education" title="학력 및 교육" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {educations.map((item) => (
           <EducationItem key={item.id} item={item} />

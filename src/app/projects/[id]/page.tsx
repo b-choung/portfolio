@@ -35,21 +35,21 @@ export default async function ProjectDetailPage({
       <BackButton />
 
       {/* Header */}
-      <div className="glass-strong rounded-xl p-8 mb-6">
+      <div className="paper-strong rounded-sm p-8 mb-6">
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-xs font-mono text-muted-foreground">
+              <span className="text-xs font-mono text-muted-foreground tracking-widest">
                 {project.period}
               </span>
               <Badge
                 variant="secondary"
-                className="text-xs bg-primary/10 text-primary border-primary/20"
+                className="text-xs bg-primary/10 text-primary border-primary/20 rounded-none"
               >
                 {categoryLabel}
               </Badge>
             </div>
-            <h1 className="text-3xl font-bold gradient-text">{project.title}</h1>
+            <h1 className="font-serif italic text-4xl text-foreground">{project.title}</h1>
           </div>
           <div className="flex gap-3 shrink-0 pt-1">
             {project.githubUrl && (
@@ -79,9 +79,9 @@ export default async function ProjectDetailPage({
       </div>
 
       {/* Overview */}
-      <div className="glass rounded-xl p-8 mb-6">
-        <p className="text-xs font-mono text-primary mb-4 tracking-widest">
-          &gt; overview
+      <div className="paper rounded-sm p-8 mb-6">
+        <p className="text-xs font-mono text-primary mb-4 tracking-[0.3em] uppercase">
+          Overview
         </p>
         <p className="text-foreground/90 leading-relaxed">
           {project.longDescription ?? project.description}
@@ -94,14 +94,14 @@ export default async function ProjectDetailPage({
 
       {/* Highlights */}
       {project.highlights && project.highlights.length > 0 && (
-        <div className="glass rounded-xl p-8 mb-6">
-          <p className="text-xs font-mono text-primary mb-4 tracking-widest">
-            &gt; highlights
+        <div className="paper rounded-sm p-8 mb-6">
+          <p className="text-xs font-mono text-primary mb-4 tracking-[0.3em] uppercase">
+            Highlights
           </p>
           <ul className="space-y-3">
             {project.highlights.map((item, i) => (
               <li key={i} className="flex gap-3 text-foreground/90">
-                <span className="text-primary font-mono shrink-0">─</span>
+                <span className="text-primary font-serif italic shrink-0">—</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -110,16 +110,16 @@ export default async function ProjectDetailPage({
       )}
 
       {/* Tech Stack */}
-      <div className="glass rounded-xl p-8">
-        <p className="text-xs font-mono text-primary mb-4 tracking-widest">
-          &gt; tech_stack
+      <div className="paper rounded-sm p-8">
+        <p className="text-xs font-mono text-primary mb-4 tracking-[0.3em] uppercase">
+          Tech Stack
         </p>
         <div className="flex flex-wrap gap-2">
           {project.techStack.map((tech) => (
             <Badge
               key={tech}
               variant="secondary"
-              className="text-sm bg-white/8 text-foreground/80 hover:bg-white/12"
+              className="text-sm bg-white/8 text-foreground/80 hover:bg-white/12 rounded-none"
             >
               {tech}
             </Badge>

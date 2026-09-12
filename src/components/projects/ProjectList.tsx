@@ -17,22 +17,22 @@ export default function ProjectList({ projects }: ProjectListProps) {
 
   return (
     <Tabs value={tab} onValueChange={setTab}>
-      <TabsList className="glass mb-8 p-1 h-auto bg-transparent border border-white/10">
+      <TabsList className="mb-8 p-0 h-auto bg-transparent border-b border-border rounded-none gap-6">
         <TabsTrigger
           value="all"
-          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-lg px-5 py-2 font-mono"
+          className="rounded-none border-0 border-b-2 border-transparent px-0 py-2 font-serif italic text-base data-active:bg-transparent data-active:border-primary data-active:text-primary shadow-none"
         >
           전체
         </TabsTrigger>
         <TabsTrigger
           value="company"
-          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-lg px-5 py-2 font-mono"
+          className="rounded-none border-0 border-b-2 border-transparent px-0 py-2 font-serif italic text-base data-active:bg-transparent data-active:border-primary data-active:text-primary shadow-none"
         >
           회사
         </TabsTrigger>
         <TabsTrigger
           value="personal"
-          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-lg px-5 py-2 font-mono"
+          className="rounded-none border-0 border-b-2 border-transparent px-0 py-2 font-serif italic text-base data-active:bg-transparent data-active:border-primary data-active:text-primary shadow-none"
         >
           개인
         </TabsTrigger>
@@ -40,8 +40,8 @@ export default function ProjectList({ projects }: ProjectListProps) {
 
       <TabsContent value={tab} className="mt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filtered.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {filtered.map((project, i) => (
+            <ProjectCard key={project.id} project={project} index={i + 1} />
           ))}
         </div>
       </TabsContent>
