@@ -24,6 +24,7 @@ export const projects: Project[] = [
       "Tailwind CSS",
       "shadcn/ui",
     ],
+    deployUrl: "https://regroove-navy.vercel.app/",
     githubUrl: "https://github.com/b-choung/regroove",
     period: "2026.08",
     images: ["/images/projects/regroove.gif"],
