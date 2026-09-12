@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FiMail, FiCopy, FiCheck } from "react-icons/fi";
 import SectionWrapper from "@/components/common/SectionWrapper";
 import SectionHeader from "@/components/common/SectionHeader";
+import Magnetic from "@/components/common/Magnetic";
 import { personal } from "@/data/personal";
 
 const EMAIL = personal.email;
@@ -27,30 +28,34 @@ export default function ContactSection() {
         </div>
 
         <div className="flex gap-3">
-          <button
-            onClick={handleCopy}
-            className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm hover:border-primary/50 hover:text-primary transition-colors"
-          >
-            {copied ? (
-              <>
-                <FiCheck size={15} className="text-primary" />
-                복사됨
-              </>
-            ) : (
-              <>
-                <FiCopy size={15} />
-                복사
-              </>
-            )}
-          </button>
+          <Magnetic>
+            <button
+              onClick={handleCopy}
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm hover:border-primary/50 hover:text-primary transition-colors"
+            >
+              {copied ? (
+                <>
+                  <FiCheck size={15} className="text-primary" />
+                  복사됨
+                </>
+              ) : (
+                <>
+                  <FiCopy size={15} />
+                  복사
+                </>
+              )}
+            </button>
+          </Magnetic>
 
-          <a
-            href={`mailto:${EMAIL}`}
-            className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-primary-foreground bg-primary hover:opacity-90 transition-opacity"
-          >
-            <FiMail size={15} />
-            메일 보내기
-          </a>
+          <Magnetic>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-primary-foreground bg-primary hover:opacity-90 transition-opacity"
+            >
+              <FiMail size={15} />
+              메일 보내기
+            </a>
+          </Magnetic>
         </div>
       </div>
     </SectionWrapper>

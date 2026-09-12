@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { Project } from "@/types/project";
 import { Badge } from "@/components/ui/badge";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
+import ViewTransitionLink from "@/components/common/ViewTransitionLink";
 
 interface ProjectCardProps {
   project: Project;
@@ -20,7 +20,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           <p className="text-xs text-muted-foreground font-mono mb-1 tracking-widest">
             {project.period}
           </p>
-          <h3 className="font-serif italic text-xl text-foreground">
+          <h3
+            className="font-serif italic text-xl text-foreground"
+            style={{ viewTransitionName: `project-title-${project.id}` } as React.CSSProperties}
+          >
             {project.title}
           </h3>
         </div>
@@ -66,12 +69,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         ))}
       </div>
 
-      <Link
+      <ViewTransitionLink
         href={`/projects/${project.id}`}
         className="ink-underline text-xs font-mono text-primary self-start relative tracking-widest uppercase"
       >
         자세히 보기
-      </Link>
+      </ViewTransitionLink>
     </div>
   );
 }

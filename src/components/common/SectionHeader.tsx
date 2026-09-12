@@ -1,3 +1,5 @@
+import KineticText from "@/components/common/KineticText";
+
 interface SectionHeaderProps {
   index: string;
   label: string;
@@ -17,9 +19,9 @@ export default function SectionHeader({
         <p className="text-sm font-mono text-primary mb-3 tracking-[0.3em] uppercase">
           {label}
         </p>
-        <h2 className="font-serif italic text-4xl md:text-5xl leading-tight">
+        <KineticText as="h2" className="font-serif italic text-4xl md:text-5xl leading-tight">
           {title}
-        </h2>
+        </KineticText>
         {description && (
           <p className="text-muted-foreground mt-3 text-base max-w-md">
             {description}

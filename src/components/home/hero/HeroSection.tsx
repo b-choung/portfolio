@@ -1,4 +1,5 @@
 import TypewriterRole from "./TypewriterRole";
+import KineticText from "@/components/common/KineticText";
 import { personal } from "@/data/personal";
 
 export default function HeroSection() {
@@ -15,9 +16,12 @@ export default function HeroSection() {
         Issue №01 — Frontend Developer
       </p>
 
-      <h1 className="font-serif italic text-6xl md:text-8xl lg:text-[9rem] leading-[0.95] tracking-tight mb-8 max-w-5xl">
+      <KineticText
+        as="h1"
+        className="font-serif italic text-6xl md:text-8xl lg:text-[9rem] leading-[0.95] tracking-tight mb-8 max-w-5xl"
+      >
         {personal.name}
-      </h1>
+      </KineticText>
 
       <p className="font-serif text-2xl md:text-3xl mb-10 flex items-baseline gap-3">
         <span className="text-muted-foreground not-italic font-mono text-base">

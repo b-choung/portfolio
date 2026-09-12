@@ -49,7 +49,12 @@ export default async function ProjectDetailPage({
                 {categoryLabel}
               </Badge>
             </div>
-            <h1 className="font-serif italic text-4xl text-foreground">{project.title}</h1>
+            <h1
+              className="font-serif italic text-4xl text-foreground"
+              style={{ viewTransitionName: `project-title-${project.id}` } as React.CSSProperties}
+            >
+              {project.title}
+            </h1>
           </div>
           <div className="flex gap-3 shrink-0 pt-1">
             {project.githubUrl && (
