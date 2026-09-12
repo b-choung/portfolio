@@ -10,22 +10,19 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <div className="group paper rounded-sm p-6 flex flex-col gap-4 hover:border-primary/40 transition-colors relative overflow-hidden">
-      <span className="index-num absolute -top-4 -right-2 text-7xl leading-none pointer-events-none select-none">
-        {String(index).padStart(2, "0")}
-      </span>
-
-      <div className="flex items-start justify-between gap-3 relative">
+    <div className="group surface surface-hover rounded-2xl p-6 flex flex-col gap-4">
+      <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-xs text-muted-foreground font-mono mb-1 tracking-widest">
-            {project.period}
-          </p>
+          <span className="badge-pill mb-2">{String(index).padStart(2, "0")}</span>
           <h3
-            className="font-serif italic text-xl text-foreground"
+            className="font-display font-semibold text-xl text-foreground"
             style={{ viewTransitionName: `project-title-${project.id}` } as React.CSSProperties}
           >
             {project.title}
           </h3>
+          <p className="text-xs text-muted-foreground font-mono mt-1 tracking-widest">
+            {project.period}
+          </p>
         </div>
         <div className="flex gap-2 shrink-0 pt-1">
           {project.githubUrl && (
@@ -53,16 +50,16 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
       </div>
 
-      <p className="text-sm text-muted-foreground leading-relaxed flex-1 relative">
+      <p className="text-sm text-muted-foreground leading-relaxed flex-1">
         {project.description}
       </p>
 
-      <div className="flex flex-wrap gap-2 relative">
+      <div className="flex flex-wrap gap-2">
         {project.techStack.map((tech) => (
           <Badge
             key={tech}
             variant="secondary"
-            className="text-xs bg-white/8 text-foreground/80 hover:bg-white/12 rounded-none"
+            className="text-xs bg-white/8 text-foreground/80 hover:bg-white/12 rounded-full"
           >
             {tech}
           </Badge>
@@ -71,7 +68,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
       <ViewTransitionLink
         href={`/projects/${project.id}`}
-        className="ink-underline text-xs font-mono text-primary self-start relative tracking-widest uppercase"
+        className="ink-underline text-xs font-mono text-primary self-start tracking-widest uppercase"
       >
         자세히 보기
       </ViewTransitionLink>

@@ -9,8 +9,8 @@ export default function SkillsSection({
   skillCategories: SkillCategory[];
 }) {
   return (
-    <SectionWrapper>
-      <SectionHeader index="02" label="Skills" title="기술 스택" />
+    <SectionWrapper tone="mint">
+      <SectionHeader index="02" label="Skills" title="기술 스택" tone="mint" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_2fr_2fr] gap-5">
         {skillCategories.map((category) => (
           <SkillGroup key={category.id} category={category} />

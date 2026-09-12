@@ -9,8 +9,8 @@ export default function ExperienceSection({
   experiences: Experience[];
 }) {
   return (
-    <SectionWrapper>
-      <SectionHeader index="03" label="Experience" title="경력" />
+    <SectionWrapper tone="peach">
+      <SectionHeader index="03" label="Experience" title="경력" tone="peach" />
       <div className="max-w-3xl">
         {experiences.map((item, i) => (
           <ExperienceItem

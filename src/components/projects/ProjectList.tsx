@@ -20,19 +20,19 @@ export default function ProjectList({ projects }: ProjectListProps) {
       <TabsList className="mb-8 p-0 h-auto bg-transparent border-b border-border rounded-none gap-6">
         <TabsTrigger
           value="all"
-          className="rounded-none border-0 border-b-2 border-transparent px-0 py-2 font-serif italic text-base data-active:bg-transparent data-active:border-primary data-active:text-primary shadow-none"
+          className="rounded-none border-0 border-b-2 border-transparent px-0 py-2 font-display font-medium text-base data-active:bg-transparent data-active:border-primary data-active:text-primary shadow-none"
         >
           전체
         </TabsTrigger>
         <TabsTrigger
           value="company"
-          className="rounded-none border-0 border-b-2 border-transparent px-0 py-2 font-serif italic text-base data-active:bg-transparent data-active:border-primary data-active:text-primary shadow-none"
+          className="rounded-none border-0 border-b-2 border-transparent px-0 py-2 font-display font-medium text-base data-active:bg-transparent data-active:border-primary data-active:text-primary shadow-none"
         >
           회사
         </TabsTrigger>
         <TabsTrigger
           value="personal"
-          className="rounded-none border-0 border-b-2 border-transparent px-0 py-2 font-serif italic text-base data-active:bg-transparent data-active:border-primary data-active:text-primary shadow-none"
+          className="rounded-none border-0 border-b-2 border-transparent px-0 py-2 font-display font-medium text-base data-active:bg-transparent data-active:border-primary data-active:text-primary shadow-none"
         >
           개인
         </TabsTrigger>

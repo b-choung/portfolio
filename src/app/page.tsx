@@ -6,8 +6,6 @@ import SectionWrapper from "@/components/common/SectionWrapper";
 import SectionHeader from "@/components/common/SectionHeader";
 import EducationSection from "@/components/home/education/EducationSection";
 import ContactSection from "@/components/home/contact/ContactSection";
-import ScrollNav from "@/components/common/ScrollNav";
-import TickerStrip from "@/components/common/TickerStrip";
 import Reveal from "@/components/common/Reveal";
 import { skillCategories } from "@/data/skills";
 import { experiences } from "@/data/experience";
@@ -15,17 +13,11 @@ import { projects } from "@/data/projects";
 import { educations } from "@/data/education";
 
 export default function Home() {
-  const allSkills = skillCategories.flatMap((c) => c.skills);
-
   return (
     <main className="flex-1">
-      <ScrollNav />
-
       <div id="hero">
         <HeroSection />
       </div>
-
-      <TickerStrip items={allSkills} />
 
       <div id="skills">
         <Reveal>
@@ -41,12 +33,13 @@ export default function Home() {
 
       <div id="projects">
         <Reveal>
-          <SectionWrapper>
+          <SectionWrapper tone="sky">
             <SectionHeader
               index="04"
-              label="Works"
+              label="Work"
               title="프로젝트"
               description="회사와 개인으로 진행한 프로젝트들을 소개합니다."
+              tone="sky"
             />
             <ProjectList projects={projects} />
           </SectionWrapper>

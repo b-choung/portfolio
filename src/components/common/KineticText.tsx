@@ -8,7 +8,7 @@ interface KineticTextProps {
   as?: ElementType;
 }
 
-const MAX_SKEW = 6;
+const MAX_SKEW = 4;
 const DECAY = 0.85;
 
 export default function KineticText({ children, className = "", as = "span" }: KineticTextProps) {

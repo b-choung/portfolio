@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ProjectImages({ images }: { images: string[] }) {
   return (
-    <div className="paper rounded-sm p-8 mb-6">
+    <div className="surface rounded-2xl p-8 mb-6">
       <p className="text-xs font-mono text-primary mb-4 tracking-[0.3em] uppercase">
         Screenshots
       </p>
@@ -10,7 +10,7 @@ export default function ProjectImages({ images }: { images: string[] }) {
         {images.map((src, i) => (
           <div
             key={i}
-            className="relative aspect-video overflow-hidden border border-border"
+            className="relative aspect-video overflow-hidden rounded-xl border border-border"
           >
             <Image
               src={src}

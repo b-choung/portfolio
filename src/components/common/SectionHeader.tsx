@@ -1,10 +1,11 @@
-import KineticText from "@/components/common/KineticText";
+type Tone = "violet" | "mint" | "peach" | "sky" | "rose" | "lavender";
 
 interface SectionHeaderProps {
   index: string;
   label: string;
   title: string;
   description?: string;
+  tone?: Tone;
 }
 
 export default function SectionHeader({
@@ -12,24 +13,26 @@ export default function SectionHeader({
   label,
   title,
   description,
+  tone = "violet",
 }: SectionHeaderProps) {
   return (
-    <div className="mb-12 rule-b pb-6 flex items-end justify-between gap-6 flex-wrap">
+    <div className={`tone-${tone} mb-12 flex items-end justify-between gap-6 flex-wrap`}>
       <div>
-        <p className="text-sm font-mono text-primary mb-3 tracking-[0.3em] uppercase">
+        <span className="badge-pill mb-4">
+          <span className="w-1.5 h-1.5 rounded-full bg-(--tone)" />
           {label}
-        </p>
-        <KineticText as="h2" className="font-serif italic text-4xl md:text-5xl leading-tight">
+        </span>
+        <h2 className="font-display font-semibold text-4xl md:text-5xl leading-tight tracking-tight">
           {title}
-        </KineticText>
+        </h2>
         {description && (
           <p className="text-muted-foreground mt-3 text-base max-w-md">
             {description}
           </p>
         )}
       </div>
-      <span className="font-serif italic text-6xl md:text-7xl text-muted-foreground/30 leading-none shrink-0">
-        {index}
+      <span className="font-mono text-xs text-muted-foreground tracking-widest shrink-0 pb-2">
+        {index} / 06
       </span>
     </div>
   );

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { personal } from "@/data/personal";
 import CustomCursor from "@/components/common/CustomCursor";
+import NavBar from "@/components/common/NavBar";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,11 +10,9 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  axes: ["opsz", "SOFT", "WONK"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -34,10 +33,11 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable} h-full`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full`}
     >
       <body className="relative min-h-full flex flex-col">
         <CustomCursor />
+        <NavBar />
         {children}
       </body>
     </html>
