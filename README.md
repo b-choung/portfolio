@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+🔗 [https://bchoung.netlify.app/](https://bchoung.netlify.app/)
 
-First, run the development server:
+프론트엔드 개발자 포트폴리오 웹사이트. Modern Grotesque 컨셉 — 딥 네이비 다크 테마와
+바이올렛 단일 강조색, 절제된 타이포·여백으로 구성했습니다.
+
+## 기술 스택
+
+- Next.js 16 (App Router) · React 19 · TypeScript
+- Tailwind CSS 4 · shadcn/ui (base-ui)
+- react-icons
+
+## 시작하기
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000) 접속.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 스크립트
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| 명령 | 설명 |
+| --- | --- |
+| `npm run dev` | 개발 서버 실행 |
+| `npm run build` | 프로덕션 빌드 |
+| `npm run start` | 빌드 결과 실행 |
+| `npm run lint` | ESLint 검사 |
 
-## Learn More
+## 구조
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/            # 라우트 (홈, 프로젝트 상세)
+├── components/     # ui / common / 섹션별 컴포넌트
+├── data/           # 개인정보·프로젝트·경력 등 콘텐츠
+├── types/
+└── lib/
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+콘텐츠 수정은 `src/data/` 파일만 편집하면 됩니다.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 규칙
 
-## Deploy on Vercel
+- UI는 shadcn/ui로 통일, 로그인·DB 없이 LocalStorage만 사용
+- 컴포넌트 1개 200줄 초과 금지
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+자세한 디자인/코딩 컨벤션은 [CLAUDE.md](./CLAUDE.md) 참고.
